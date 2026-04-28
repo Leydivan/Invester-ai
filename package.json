@@ -1,0 +1,19 @@
+{
+  "name": "investeai-monorepo",
+  "version": "0.1.0",
+  "description": "InvesterAI - Automated Trading Platform with AI",
+  "private": true,
+  "scripts": {
+    "start:dev": "cd apps/backend && npm run start:dev",
+    "start:prod": "cd apps/backend && npm start",
+    "build": "cd apps/backend && npm run build",
+    "db:migrate": "cd apps/backend && npm run typeorm migration:run",
+    "db:seed": "cd apps/backend && npm run typeorm migration:run && node dist/database/seeds/admin.seed.js",
+    "test": "cd apps/backend && npm run test",
+    "lint": "cd apps/backend && npm run lint"
+  },
+  "workspaces": [
+    "apps/backend",
+    "apps/frontend"
+  ]
+}
